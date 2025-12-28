@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakshi Bagul | Software Developer</title>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papm8A7tvsxFpE1B+UKz9VYv0Th4YnqR3+2PZcJ2vCefL1XlfCLTp8B6V6ivZf+nHG7t4cGRxvl+zK+4jT64kg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+/* Root colors and fonts */
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --primary: #3b82f6;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --hover: #334155;
+  --accent: #facc15;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  background: linear-gradient(90deg, #3b82f6, #facc15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.header p {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.links a {
+  margin: 0 15px;
+  font-size: 16px;
+  color: var(--primary);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+/* Sections */
+.section {
+  background: var(--card);
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  border-left: 5px solid var(--primary);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* Section titles */
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.skill {
+  background: var(--hover);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  background: var(--primary);
+  color: var(--bg);
+  transform: scale(1.05);
+}
+
+/* Experience & Projects cards */
+.project, .experience {
+  background: var(--hover);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.project:hover, .experience:hover {
+  background: var(--primary);
+  transform: translateY(-5px);
+  color: var(--bg);
+}
+
+.project ul, .experience ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.project ul li, .experience ul li {
+  margin-bottom: 8px;
+}
+
+/* Tooltip effect */
+.tooltip {
+  position: absolute;
+  top: 10px;
+  right: -330px;
+  width: 300px;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+}
+
+.project:hover .tooltip,
+.experience:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 30px;
+}
+
+/* Responsive tooltip */
+@media (max-width: 900px) {
+  .tooltip {
+    position: static;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<!-- HEADER -->
+<section class="header">
+  <h1>Sakshi Bagul</h1>
+  <p>Software Developer | Full-Stack | Backend & Data-Driven Systems</p>
+  <p>📍 Mumbai, Maharashtra | 📞 8097985952 | ✉️ sakshibagul0502@gmail.com</p>
+  <div class="links">
+    <a href="https://www.linkedin.com/in/sakshi-bagul07/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="https://github.com/sakshi-0507" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+  </div>
+</section>
+
+<!-- PROFESSIONAL SUMMARY -->
+<section class="section">
+    <h2>Professional Summary</h2>
+    <p>
+        Innovative and driven Full-Stack Software Developer with practical experience in developing dynamic web applications using React.js, Node.js, Python, MySQL, and MongoDB. Adept at transforming complex requirements into efficient, scalable solutions, integrating machine learning models, and optimizing system performance. Passionate about building impactful software, continuously learning cutting-edge technologies, and contributing to high-quality, user-centric applications.
+      </p>
+      
+  </section>
+
+<!-- TECH SKILLS -->
+<section class="section">
+  <h2>Technical Skills</h2>
+  <div class="skills-grid">
+    <div class="skill">Python, JavaScript, C, C++</div>
+    <div class="skill">React.js, HTML5, CSS3, Tailwind CSS</div>
+    <div class="skill">Node.js, Express.js, REST APIs</div>
+    <div class="skill">MySQL, MongoDB</div>
+    <div class="skill">Machine Learning: Data Preprocessing, Model Training</div>
+    <div class="skill">Git, GitHub, GitLab, Postman, VS Code</div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section">
+  <h2>Experience</h2>
+  <div class="experience">
+    <strong>Full Stack Developer – Devivers Digital Solutions</strong><br>
+    <small>June 2025 – Present</small>
+    <ul>
+      <li>Built scalable full-stack applications using React, Node.js & databases</li>
+      <li>Designed production-ready REST APIs</li>
+      <li>Created reusable frontend components for enhanced UX</li>
+    </ul>
+    <div class="tooltip">Responsible for end-to-end application development, system integration, database optimization, and performance tuning for live client projects.</div>
+  </div>
+
+  <div class="experience">
+    <strong>Software Developer Intern – Talent Corner HR Services</strong><br>
+    <small>Feb 2025 – June 2025</small>
+    <ul>
+      <li>Backend development with Node.js, MySQL & Python</li>
+      <li>Integrated React frontend with REST APIs</li>
+      <li>Managed HR and payroll data securely</li>
+    </ul>
+    <div class="tooltip">Gained hands-on experience in real-world HR systems, API development, database management, and performance optimization.</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section">
+  <h2>Key Projects</h2>
+
+  <div class="project">
+    <strong>Continent Dictionary</strong>
+    <ul>
+      <li>Python-based continent-to-country mapping system</li>
+      <li>Fast and efficient data lookup</li>
+    </ul>
+    <div class="tooltip">Implemented using Python data structures for clean, maintainable code.</div>
+  </div>
+
+  <div class="project">
+    <strong>Food Recommendation System</strong>
+    <ul>
+      <li>ML-based personalized suggestions</li>
+      <li>Frontend: HTML, CSS, JavaScript</li>
+    </ul>
+    <div class="tooltip">Uses ML to generate accurate recommendations based on user behavior.</div>
+  </div>
+
+  <div class="project">
+    <strong>Payroll & Attendance CRM System</strong> | <a href="#" target="_blank">Live Demo</a>
+    <ul>
+      <li>Employee attendance & payroll management</li>
+      <li>React (TS), Node.js & MongoDB</li>
+    </ul>
+    <div class="tooltip">Full-stack CRM with role-based access, attendance tracking, payroll calculation.</div>
+  </div>
+
+  <div class="project">
+    <strong>E-Commerce Website (Client)</strong> | <a href="#" target="_blank">Live Website</a>
+    <ul>
+      <li>Responsive UI built with React & Tailwind CSS</li>
+      <li>Client-facing production website</li>
+    </ul>
+    <div class="tooltip">Clean, responsive, and professional e-commerce frontend focusing on UX/UI.</div>
+  </div>
+</section>
+
+<!-- OTHER PROJECTS -->
+<section class="section">
+    <h2>Other Projects</h2>
+  
+    <div class="project">
+      <strong>Smart Automation Street Light (IoT)</strong>
+      <div class="tooltip">Energy-efficient lighting system using sensors and automation.</div>
+    </div>
+  
+    <div class="project">
+      <strong>Smart Gas Leakage Detection (IoT)</strong>
+      <div class="tooltip">Real-time gas detection system with alert mechanism.</div>
+    </div>
+  
+    <div class="project">
+      <strong>Loan Eligibility Prediction (ML)</strong>
+      <div class="tooltip">Ensemble learning model to predict loan approval probability.</div>
+    </div>
+  
+    <div class="project">
+      <strong>Decentralized Google Drive (Blockchain)</strong>
+      <div class="tooltip">Blockchain-based decentralized file storage ensuring data security.</div>
+    </div>
+  </section>
+
+<!-- EDUCATION -->
+<section class="section">
+  <h2>Education</h2>
+  <p><strong>B.E – Information Technology</strong></p>
+  <p>Datta Meghe College of Engineering (2020–2024)</p>
+  <p>CGPA: 8.57</p>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section">
+  <h2>Certifications</h2>
+  <ul>
+    <li>Python Programming</li>
+    <li>Machine Learning Fundamentals</li>
+    <li>Data Analytics & Visualization</li>
+  </ul>
+</section>
+
+<div class="footer">
+  Designed by Sakshi Bagul | Digital Resume
+</div>
+
+</div>
+</body>
+</html>
